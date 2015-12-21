@@ -1,1 +1,20 @@
+17.12.15
+-Loin Github käyttäjän & avasin tämän repositorion
+-suunnittelin & aloitin Kings-Cup projektin NetBeansissa
+-vaikeuksia saada netbeans javadoccia näkymään githubissa
+Aikaa kulutettu yhteensä noin 2h
+
+21.12.15
+-Yritin hiki hatussa saamaan projektin näkymään repositoriossa: fail
+-Netbeansprojektiin koodia
+  -loin luokat: peli, pelaaja, kortti, neverhaveiever sekä käyttöliittymäluokan pelilauta
+  -NeverhaveIEver -luokkaan toiminnallisuutta
+    -satunnaisen kysymyksen kysyminen (random-luokka)
+  -pelaajaluokkaan toiminnallisuutta
+    -pelaaja tuntee kaverinsa (mate/bitch)
+    -tätä tietoa hyödyntäviä metodeita
+  -ym. pientä toiminnallisuutta
+  -JUnit edellämainituille metodeille. Kaikki läpi
+  -Luokkakaavion piirto sovelluksesta (Löytyy Issues-osiosta)
+  Aikaa kulutettu yhteensä noin 1.5h
 
