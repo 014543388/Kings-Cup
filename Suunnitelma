@@ -15,7 +15,7 @@ Luokkia:
 Peli
 -List<Pelaaja> pelaajat
 -int juotujaJuomia
--HashMap<Kortti, maara> korttipakka;
+-KorttiPakka korttipakka;
 -Pelaaja QuestionMaster
 lisaaJuoma();
 
@@ -32,7 +32,7 @@ Kortti
 Pelaaja
 -String nimi;
 -Pelaaja bitch;
--Pelaaja master;
+(-Pelaaja master;)
 
 NeverHaveIEver
 -List<String> teot
