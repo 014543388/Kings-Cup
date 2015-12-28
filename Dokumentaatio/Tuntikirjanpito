@@ -26,4 +26,10 @@ Aikaa kulutettu yhteensä noin 2h
   -korttiluokkien lisäys(1-4)
   -refaktorointia 
   -lisöyksiä: pelaaja-luokkaan sukupuoli ym.
+  1h
 
+28.12.15
+-Korttipakkaan metodeja
+-JUnit testejä korttipakalle
+-refaktorointia
+1.5h
