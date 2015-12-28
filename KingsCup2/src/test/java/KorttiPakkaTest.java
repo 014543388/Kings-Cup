@@ -48,12 +48,21 @@ public class KorttiPakkaTest {
     public void korttejaOikeaMaaraAlussa(){
         assertTrue(pakka.korttejaYhteensa()==8);
     }
+    
+    @Test
+    public void korttejaOikeMaaraNostojenJalkeen(){
+        pakka.nostaKortti(1);
+        pakka.nostaKortti(2);
+        pakka.nostaKortti(2);
+        assertTrue(pakka.korttejaYhteensa()==5);
+    }
 
     @Test
-    public void korttejaOikeaMaaraNostojenJAlkeen(){
-        pakka.nostakortti();
-        pakka.nostakortti();
+    public void korttejaOikeaMaaraSatunnaistenNostojenJAlkeen(){
+        pakka.nostaSatunnainenKortti();
+        pakka.nostaSatunnainenKortti();
         assertTrue(pakka.korttejaYhteensa()==6);
     }
+    
     
 }

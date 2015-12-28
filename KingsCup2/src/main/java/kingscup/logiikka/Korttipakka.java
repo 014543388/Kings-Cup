@@ -36,7 +36,7 @@ public class Korttipakka {
     
     
     
-    public Kortti nostakortti(){
+    public Kortti nostaSatunnainenKortti(){
         int eriKortteja = kortit.keySet().size();
         int kortinNumero = random.nextInt(eriKortteja) + 1;
         while(korttienMaarat.get(kortinNumero)==0){
@@ -45,6 +45,13 @@ public class Korttipakka {
         korttienMaarat.put(kortinNumero, korttienMaarat.get(kortinNumero)-1);
         
         return kortit.get(kortinNumero);
+    }
+    
+    public Kortti nostaKortti(int i){
+        if(i<1||i>kortit.keySet().size())return null;
+        if(korttienMaarat.get(i)==0)return null;
+        korttienMaarat.put(i, korttienMaarat.get(i)-1);
+        return kortit.get(i);
     }
     
     public int korttejaYhteensa(){
