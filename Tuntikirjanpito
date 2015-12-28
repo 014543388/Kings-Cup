@@ -14,7 +14,16 @@ Aikaa kulutettu yhteensä noin 2h
     -pelaaja tuntee kaverinsa (mate/bitch)
     -tätä tietoa hyödyntäviä metodeita
   -ym. pientä toiminnallisuutta
-  -JUnit edellämainituille metodeille. Kaikki läpi
+  -JUnit Testejä pelaaja-luokan metodeille
   -Luokkakaavion piirto sovelluksesta (Löytyy Issues-osiosta)
   Aikaa kulutettu yhteensä noin 1.5h
+  
+  24.12.15
+  -Peruslogiikkaa & korjailuja
+  30min
+  
+  26.12.15
+  -korttiluokkien lisäys(1-4)
+  -refaktorointia 
+  -lisöyksiä: pelaaja-luokkaan sukupuoli ym.
 
