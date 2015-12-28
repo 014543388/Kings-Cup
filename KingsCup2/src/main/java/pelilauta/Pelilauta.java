@@ -1,4 +1,4 @@
-package kingscup.logiikka;
+package pelilauta;
 
 import java.awt.Container;
 import java.awt.Dimension;
