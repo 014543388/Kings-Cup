@@ -31,7 +31,7 @@ public class Korttipakka {
             }
             
         }
-        //lisää kortit hashmappiin tassa
+        //lisää kortit hashmappiin tassa?
     }
     
     

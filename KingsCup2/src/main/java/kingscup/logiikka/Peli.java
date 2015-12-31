@@ -10,13 +10,11 @@ public class Peli {
     private int juotujaJuomia;
     private Korttipakka pakka;
     private HashMap<String, Pelaaja> pelaajat;
-    private Pelaaja qm;
 
-    public Peli(HashMap<Integer, Kortti> kortit, HashMap<String, Pelaaja> pelaajat) {
+    public Peli(Korttipakka pakka, HashMap<String, Pelaaja> pelaajat) {
         juotujaJuomia = 0;
-        pakka = new Korttipakka(kortit);
+        this.pakka = pakka;
         this.pelaajat = pelaajat;
-        qm = null;
     }
     
     
