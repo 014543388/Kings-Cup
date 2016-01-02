@@ -1,4 +1,4 @@
-package LogiikkaTest;
+package kingscup.logiikka;
 
 
 
@@ -17,11 +17,11 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 
-public class KorttiPakkaTest {
+public class KorttipakkaTest {
     Korttipakka pakka;
     Scanner lukija;
     
-    public KorttiPakkaTest() {
+    public KorttipakkaTest() {
     }
     
     @BeforeClass

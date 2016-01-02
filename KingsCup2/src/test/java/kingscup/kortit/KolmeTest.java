@@ -1,5 +1,5 @@
 
-package KortitTest;
+package kingscup.kortit;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;

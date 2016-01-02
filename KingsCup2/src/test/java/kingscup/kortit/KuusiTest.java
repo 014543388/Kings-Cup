@@ -1,5 +1,5 @@
 
-package KortitTest;
+package kingscup.kortit;
 
 import java.util.HashMap;
 import kingscup.kortit.Kortti;

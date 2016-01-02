@@ -1,4 +1,4 @@
-package LogiikkaTest;
+package kingscup.logiikka;
 
 
 
