@@ -1,4 +1,5 @@
 # Kings-Cup
 Joululabra 2015
 
-Evan Millerin javalabra tässänäin
+2.1.2016 - "javadoc: error - No packages or classes specified." oli päivän sana
+turisteja kun ollaan. Kokeilin antaa polun useaan otteeseen. Turisti...
