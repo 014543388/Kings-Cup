@@ -36,13 +36,13 @@ public class KingsCup {
             pelaajaHash.put(p.getNimi(), p);
         }
         HashMap<Integer, Kortti> kortit = new HashMap<>();
-        kortit.put(1, new Assa());
+        kortit.put(1, new Assa(lukija));
         kortit.put(2, new Kaksi(lukija, pelaajaHash));
         kortit.put(3, new Kolme(lukija, pelaajaHash));
         kortit.put(4, new Nelja(pelaajaHash));
         kortit.put(5, new Viisi(lukija, pelaajaHash));
         kortit.put(6, new Kuusi(pelaajaHash));
-        kortit.put(7, new Seitseman());
+        kortit.put(7, new Seitseman(lukija, pelaajaHash));
         kortit.put(8, new Kahdeksan(pelaajaHash, lukija));
         kortit.put(9, new Yhdeksan(lukija, pelaajaHash));
         kortit.put(10, new Kymmenen(lukija));
@@ -56,9 +56,9 @@ public class KingsCup {
     }
 
     public static void main(String[] args) {
-//        Pelilauta lauta = new Pelilauta();
-//        
-//        lauta.run();
+        Pelilauta lauta = new Pelilauta();
+        
+        lauta.run();
         
         
         

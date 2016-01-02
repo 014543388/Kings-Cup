@@ -20,10 +20,12 @@ public class Kaksi extends Kortti{
     public void suorita() {
         String juoja;
         System.out.println("2 is you");
-        do{
-            System.out.print("Kuka juo: ");
+        System.out.print("Kuka juo: ");
+        juoja = lukija.nextLine();
+        while(!pelaajat.containsKey(juoja)){
+            System.out.println("pelaaja ei mukana pelissä. Kuka juo? ");
             juoja = lukija.nextLine();
-        }while(!pelaajat.containsKey(juoja));
+        }
         
         pelaajat.get(juoja).juo();
     }

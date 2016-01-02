@@ -1,3 +1,7 @@
+package LogiikkaTest;
+
+
+
 import java.util.ArrayList;
 import static kingscup.logiikka.KingsCup.Sukupuoli.MIES;
 import kingscup.logiikka.Pelaaja;
@@ -44,6 +48,20 @@ public class PelaajaTest {
         p.juo();
         assertEquals(p.getJuonut(), 7);
     }
+    
+    @Test
+    public void pelaajallaAlussaNollaMatea(){
+        assertTrue(p.getMates().isEmpty());
+    }
+    
+    @Test
+    public void pelaajaSaanutMateja(){
+        Pelaaja k = new Pelaaja("K", MIES);
+        Pelaaja s = new Pelaaja("s", MIES);
+        p.newMate(k);
+        p.newMate(s);
+        assertEquals(p.getMates().size(), 2);
+    }
 
     @Test
     public void pelaajanTulostusNoMates() {
@@ -53,14 +71,14 @@ public class PelaajaTest {
     @Test
     public void pelaajanTulostusWithMates() {
         Pelaaja k = new Pelaaja("K", MIES);
-        p.newBitch(k);
+        p.newMate(k);
         assertTrue(p.toString().contains("K"));
     }
     
     @Test
     public void eiVoiOllaItsensaMate(){
-        p.newBitch(p);
-        assertEquals(p.getBitches().size(), 0);
+        p.newMate(p);
+        assertEquals(p.getMates().size(), 0);
     }
     
     @Test
@@ -71,21 +89,37 @@ public class PelaajaTest {
     @Test
     public void ketkaJuovatKunPelaajallaYksiMate() {
         Pelaaja k = new Pelaaja("K", MIES);
-        p.newBitch(k);
+        p.newMate(k);
         assertTrue(p.ketkaJuo(new ArrayList<String>()).size()==2);
+    }
+    
+    @Test
+    public void ketkaJuovatKunPelaajallaMateKetju(){
+        Pelaaja k = new Pelaaja("K", MIES);
+        Pelaaja s = new Pelaaja("s", MIES);
+        Pelaaja d = new Pelaaja("d", MIES);
+        p.newMate(k);
+        p.newMate(s);
+        p.newMate(d);
+        
+        assertTrue(p.ketkaJuo(new ArrayList<String>()).contains(p.getNimi()));
+        assertTrue(p.ketkaJuo(new ArrayList<String>()).contains(k.getNimi()));
+        assertTrue(p.ketkaJuo(new ArrayList<String>()).contains(s.getNimi()));
+        assertTrue(p.ketkaJuo(new ArrayList<String>()).contains(d.getNimi()));
+        assertTrue(p.ketkaJuo(new ArrayList<String>()).size()==4);
     }
     
     @Test
     public void ketkaJuovatKunPelaajallaMateKetjuLooppi() {
         Pelaaja k = new Pelaaja("K", MIES);
-        p.newBitch(k);
         
         Pelaaja s = new Pelaaja("s", MIES);
         Pelaaja d = new Pelaaja("d", MIES);
         
-        k.newBitch(s);
-        s.newBitch(d);
-        d.newBitch(p);
+        p.newMate(k);
+        p.newMate(s);
+        p.newMate(d);
+        d.newMate(p);
         
         assertTrue(p.ketkaJuo(new ArrayList<String>()).size()==4);
     }

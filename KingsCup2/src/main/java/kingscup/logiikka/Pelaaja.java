@@ -6,15 +6,15 @@ import kingscup.logiikka.KingsCup.Sukupuoli;
 
 
 public class Pelaaja {
-    private Sukupuoli sukupoli;
+    private final Sukupuoli sukupoli;
     private String nimi;
     private int juonut;
-    private ArrayList<Pelaaja> bitches;
+    private ArrayList<Pelaaja> mates;
 
     public Pelaaja(String nimi, Sukupuoli sukupuoli) {
         this.sukupoli = sukupuoli;
         this.nimi = nimi;
-        this.bitches = new ArrayList<Pelaaja>();
+        this.mates = new ArrayList<Pelaaja>();
         juonut = 0;
 //        this.masters = new ArrayList<Pelaaja>();
     }
@@ -27,8 +27,6 @@ public class Pelaaja {
         return juonut;
     }
     
-    
-    
     public void juo(){
         juonut++;
     }
@@ -37,18 +35,18 @@ public class Pelaaja {
         juonut += kuinkaMonta;
     }
 
-    public ArrayList<Pelaaja> getBitches() {
-        return bitches;
+    public ArrayList<Pelaaja> getMates() {
+        return mates;
     }
 
     public String getNimi() {
         return nimi;
     }
     
-    public void newBitch(Pelaaja pelaaja){
+    public void newMate(Pelaaja pelaaja){
         if(this==pelaaja)return;
-        if(this.bitches.contains(pelaaja))return;
-        this.bitches.add(pelaaja);
+        if(this.mates.contains(pelaaja))return;
+        this.mates.add(pelaaja);
     }
     
     
@@ -56,7 +54,7 @@ public class Pelaaja {
     public ArrayList<String> ketkaJuo(ArrayList<String> kaikkiJotkaJuovat){
         kaikkiJotkaJuovat.add(this.nimi);
 //        ArrayList<Pelaaja> kaikkiJotkaJuovat = new ArrayList<>();
-        for (Pelaaja p : this.bitches) {
+        for (Pelaaja p : this.mates) {
             if(!kaikkiJotkaJuovat.contains(p.getNimi())){
                 p.ketkaJuo(kaikkiJotkaJuovat);
             }
@@ -69,9 +67,9 @@ public class Pelaaja {
     @Override
     public String toString() {
         String bitches = "none";
-        if(this.bitches.size()>0){
+        if(this.mates.size()>0){
             bitches = "";
-            for (Pelaaja p : this.bitches) {
+            for (Pelaaja p : this.mates) {
                 bitches += p.getNimi()+", ";
             }
             bitches = bitches.substring(0, bitches.length()-2);

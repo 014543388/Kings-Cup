@@ -1,3 +1,5 @@
+package LogiikkaTest;
+
 
 
 import java.util.HashMap;
@@ -34,7 +36,7 @@ public class KorttiPakkaTest {
     public void setUp() {
         HashMap<String, Pelaaja> pelaajaHash = new HashMap<>();
         HashMap<Integer, Kortti> kortit = new HashMap<>();
-        kortit.put(1, new Assa());
+        kortit.put(1, new Assa(lukija));
         kortit.put(2, new Kaksi(lukija, pelaajaHash));
         
         pakka = new Korttipakka(kortit);

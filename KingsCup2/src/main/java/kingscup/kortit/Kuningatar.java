@@ -14,6 +14,7 @@ public class Kuningatar extends Kortti{
     public Kuningatar(Scanner lukija, HashMap<String, Pelaaja> pelaajat) {
         this.lukija = lukija;
         this.pelaajat = pelaajat;
+        this.questionMaster = null;
     }
 
     @Override

@@ -23,7 +23,13 @@ public class Viisi extends Kortti{
                 + " Seuraava kopioi liikkeen ja lisää siihen uuden liikkeen. Ensimmäinen,"
                 + " joka unohtaa tähänastisen liikkeen, juo.");
         System.out.print("mokaaja: ");
-        pelaajat.get(lukija.nextLine()).juo();
+        String juoja = lukija.nextLine();
+        while(!pelaajat.containsKey(juoja)){
+            System.out.println("pelaaja ei mukana pelissä. Kuka juo? ");
+            juoja = lukija.nextLine();
+        }
+        
+        pelaajat.get(juoja).juo();
     }
     
 }

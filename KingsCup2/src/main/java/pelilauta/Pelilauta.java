@@ -1,7 +1,9 @@
 package pelilauta;
 
+import java.awt.BorderLayout;
 import java.awt.Container;
 import java.awt.Dimension;
+import java.awt.GridLayout;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -26,19 +28,22 @@ public class Pelilauta implements Runnable {
     }
 
     private void luoKomponentit(Container container) {
-        BoxLayout layout = new BoxLayout(container, BoxLayout.X_AXIS);
+        GridLayout layout = new GridLayout(4, 4);
         container.setLayout(layout);
 
-        container.add(new JButton("Eka!"));
-        container.add(new JLabel("Toka!"));
-        container.add(new JLabel("Kolmas!"));
-
-        layout = new BoxLayout(container, BoxLayout.Y_AXIS);
-        container.setLayout(layout);
-
-        container.add(new JLabel("Eka!"));
-        container.add(new JLabel("Toka!"));
-        container.add(new JLabel("Kolmas!"));
+            container.add(new JButton("Ässä"));
+            container.add(new JButton("Kksi"));
+            container.add(new JButton("Kolme"));
+            container.add(new JButton("Nelkku"));
+            container.add(new JButton("Viisi"));
+            container.add(new JButton("Kuusi"));
+            container.add(new JButton("Seitsemän"));
+            container.add(new JButton("Kahdeksan"));
+            container.add(new JButton("Yhdeksän"));
+            container.add(new JButton("Kymmenen"));
+            container.add(new JButton("Jätkä"));
+            container.add(new JButton("Kuningatar"));
+            container.add(new JButton("Kuningas"));
     }
 
 }

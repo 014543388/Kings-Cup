@@ -19,7 +19,7 @@ public class Peli {
     
     
     
-    public void run(){
+    public void pelaa(){
         for(int i = pakka.korttejaYhteensa(); i > 0; i--){
             
         }

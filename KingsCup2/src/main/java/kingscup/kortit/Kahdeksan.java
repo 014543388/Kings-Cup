@@ -23,7 +23,7 @@ public class Kahdeksan extends Kortti{
         System.out.println("Kaveri: ");
         String kaveri = lukija.nextLine();
         
-        pelaajat.get(nostaja).newBitch(pelaajat.get(kaveri));
+        pelaajat.get(nostaja).newMate(pelaajat.get(kaveri));
     }
     
 }

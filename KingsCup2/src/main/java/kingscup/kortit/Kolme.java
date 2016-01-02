@@ -19,8 +19,14 @@ public class Kolme extends Kortti{
     public void suorita() {
         System.out.println("3 is me");
         System.out.print("Kenen vuoro?");
-        String vuorossa = lukija.nextLine();
-        pelaajat.get(vuorossa).juo();
+        String juoja = lukija.nextLine();
+        
+        while(!pelaajat.containsKey(juoja)){
+            System.out.println("pelaaja ei mukana pelissä. Kuka juo? ");
+            juoja = lukija.nextLine();
+        }
+        
+        pelaajat.get(juoja).juo();
     }
     
 }
