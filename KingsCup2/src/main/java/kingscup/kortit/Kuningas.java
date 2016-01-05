@@ -1,11 +1,17 @@
 
 package kingscup.kortit;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 
 public class Kuningas extends Kortti{
+    private Scanner lukija;
+    private ArrayList<String> saannot = new ArrayList<>();
     private int suorituksia;
 
-    public Kuningas() {
+    public Kuningas(Scanner lukija) {
+        this.lukija = lukija;
         suorituksia = 0;
     }
     
@@ -14,7 +20,10 @@ public class Kuningas extends Kortti{
     @Override
     public void suorita() {
         if(suorituksia < 3){
-            System.out.println("Its the Kings Cup\nNostaja kaataa kuppiin juotavaa");
+            System.out.println("Its the Kings Cup\nNostaja kaataa kuppiin juotavaa ja"
+                    + " keksii uuden säännön. Jos sääntöä rikkoo, juo.");
+            System.out.println("Sääntö: ");
+            saannot.add(lukija.nextLine());
         } else {
             System.out.println("Its the Kings Cup\nNostaja juo kupin sisällön");
         }

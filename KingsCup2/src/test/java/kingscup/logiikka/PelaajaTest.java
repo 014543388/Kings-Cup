@@ -83,14 +83,14 @@ public class PelaajaTest {
     
     @Test
     public void ketkaJuovatKunPelaajallaNoMates() {
-        assertTrue(p.ketkaJuo(new ArrayList<String>()).size()==1);
+        assertTrue(p.ketkaJuo(new ArrayList<Pelaaja>()).size()==1);
     }
     
     @Test
     public void ketkaJuovatKunPelaajallaYksiMate() {
         Pelaaja k = new Pelaaja("K", MIES);
         p.newMate(k);
-        assertTrue(p.ketkaJuo(new ArrayList<String>()).size()==2);
+        assertTrue(p.ketkaJuo(new ArrayList<Pelaaja>()).size()==2);
     }
     
     @Test
@@ -99,29 +99,54 @@ public class PelaajaTest {
         Pelaaja s = new Pelaaja("s", MIES);
         Pelaaja d = new Pelaaja("d", MIES);
         p.newMate(k);
-        p.newMate(s);
-        p.newMate(d);
+        k.newMate(s);
+        s.newMate(d);
         
-        assertTrue(p.ketkaJuo(new ArrayList<String>()).contains(p.getNimi()));
-        assertTrue(p.ketkaJuo(new ArrayList<String>()).contains(k.getNimi()));
-        assertTrue(p.ketkaJuo(new ArrayList<String>()).contains(s.getNimi()));
-        assertTrue(p.ketkaJuo(new ArrayList<String>()).contains(d.getNimi()));
-        assertTrue(p.ketkaJuo(new ArrayList<String>()).size()==4);
+        assertTrue(p.ketkaJuo(new ArrayList<Pelaaja>()).contains(p));
+        assertTrue(p.ketkaJuo(new ArrayList<Pelaaja>()).contains(k));
+        assertTrue(p.ketkaJuo(new ArrayList<Pelaaja>()).contains(s));
+        assertTrue(p.ketkaJuo(new ArrayList<Pelaaja>()).contains(d));
+        assertTrue(p.ketkaJuo(new ArrayList<Pelaaja>()).size()==4);
     }
     
     @Test
     public void ketkaJuovatKunPelaajallaMateKetjuLooppi() {
         Pelaaja k = new Pelaaja("K", MIES);
-        
         Pelaaja s = new Pelaaja("s", MIES);
         Pelaaja d = new Pelaaja("d", MIES);
         
         p.newMate(k);
-        p.newMate(s);
-        p.newMate(d);
+        k.newMate(s);
+        s.newMate(d);
         d.newMate(p);
         
-        assertTrue(p.ketkaJuo(new ArrayList<String>()).size()==4);
+        assertTrue(p.ketkaJuo(new ArrayList<Pelaaja>()).size()==4);
+    }
+    
+    @Test
+    public void matetJuoKunPelaajaJuo(){
+        Pelaaja k = new Pelaaja("K", MIES);
+        Pelaaja s = new Pelaaja("s", MIES);
+        Pelaaja d = new Pelaaja("d", MIES);
+        p.newMate(k);
+        p.newMate(s);
+        p.newMate(d);
+        
+        p.juo();
+        
+        assertEquals(p.getJuonut(), 1);
+        assertEquals(k.getJuonut(), 1);
+        assertEquals(s.getJuonut(), 1);
+        assertEquals(d.getJuonut(), 1);
+    }
+    
+    @Test
+    public void eiAsetaSamaaMateaUseaanKertaan(){
+        Pelaaja k = new Pelaaja("K", MIES);
+        p.newMate(k);
+        p.newMate(k);
+        
+        assertEquals(p.getMates().size(), 1);
     }
     
 }

@@ -24,13 +24,13 @@ import static kingscup.logiikka.KingsCup.Sukupuoli.MIES;
 import static kingscup.logiikka.KingsCup.Sukupuoli.NAINEN;
 
 public class KingsCup {
-    Scanner lukija = new Scanner(System.in);
+    private Scanner lukija = new Scanner(System.in);
     
     public enum Sukupuoli{
         MIES, NAINEN;
     }
     
-    public Peli luoPerusPeli(ArrayList<Pelaaja> pelaajat){
+    public Peli luoPeli(ArrayList<Pelaaja> pelaajat){
         HashMap<String, Pelaaja> pelaajaHash = new HashMap<>();
         for(Pelaaja p : pelaajat){
             pelaajaHash.put(p.getNimi(), p);
@@ -40,15 +40,16 @@ public class KingsCup {
         kortit.put(2, new Kaksi(lukija, pelaajaHash));
         kortit.put(3, new Kolme(lukija, pelaajaHash));
         kortit.put(4, new Nelja(pelaajaHash));
+        kortit.put(4, new Nelja(pelaajaHash));
         kortit.put(5, new Viisi(lukija, pelaajaHash));
         kortit.put(6, new Kuusi(pelaajaHash));
         kortit.put(7, new Seitseman(lukija, pelaajaHash));
-        kortit.put(8, new Kahdeksan(pelaajaHash, lukija));
+        kortit.put(8, new Kahdeksan(lukija, pelaajaHash));
         kortit.put(9, new Yhdeksan(lukija, pelaajaHash));
         kortit.put(10, new Kymmenen(lukija));
         kortit.put(11, new Jatka(lukija, pelaajaHash));
         kortit.put(12, new Kuningatar(lukija, pelaajaHash));
-        kortit.put(13, new Kuningas());
+        kortit.put(13, new Kuningas(lukija));
         
         
         Peli perusPeli = new Peli(new Korttipakka(kortit), pelaajaHash);
@@ -56,9 +57,13 @@ public class KingsCup {
     }
 
     public static void main(String[] args) {
-        Pelilauta lauta = new Pelilauta();
+//        Pelilauta lauta = new Pelilauta();
+//        
+//        lauta.run();
         
-        lauta.run();
+        
+        
+        
         
         
         

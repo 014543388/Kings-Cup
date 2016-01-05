@@ -18,10 +18,25 @@ public class Seitseman extends Kortti{
     }
     
     
-
     @Override
     public void suorita() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("7 is Heaven. Nostajasta tulee HeavenMaster. kun HM nostaa"
+                + "kätensä ilmaan, viimeinen kätensä ilmaan nostanut juo. Kertakäyttöinen. "
+                + "Valta katoaa seuraavan 7 ilmaantuessa");
+        System.out.print("HeavenMaster: ");
+        String pelaajanNimi = lukija.nextLine();
+        while(!pelaajat.containsKey(pelaajanNimi)){
+            System.out.print("Pelaaja ei mukana pelissä. HeavenMaster? ");
+            pelaajanNimi = lukija.nextLine();
+        }
+        
+        this.heavenMaster = pelaajat.get(pelaajanNimi);
     }
+
+    public Pelaaja getHeavenMaster() {
+        return heavenMaster;
+    }
+    
+    
     
 }

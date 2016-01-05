@@ -66,5 +66,12 @@ public class KorttipakkaTest {
         assertTrue(pakka.korttejaYhteensa()==6);
     }
     
+    @Test
+    public void tiettyaKorttiaOikeaMaaraNostojenJalkeen(){
+        pakka.nostaKortti(2);
+        int kakkosia = pakka.getKorttienMaarat().get(2);
+        assertEquals(kakkosia, 3);
+    }
+    
     
 }

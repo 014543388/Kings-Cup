@@ -18,16 +18,33 @@ public class Pelaaja {
         juonut = 0;
 //        this.masters = new ArrayList<Pelaaja>();
     }
+    
+    /**
+     * 
+     * @return pelaajan sukupuoli
+     */
 
     public Sukupuoli getSukupoli() {
         return sukupoli;
     }
+    
+    /**
+     * 
+     * @return pelaajan tähän asti juomat juomat
+     */
 
     public int getJuonut() {
         return juonut;
     }
     
     public void juo(){
+        ArrayList<Pelaaja> juojat = ketkaJuo(new ArrayList<Pelaaja>());
+        for(Pelaaja p : juojat){
+            p.huikka();
+        }
+    }
+    
+    private void huikka(){
         juonut++;
     }
     
@@ -51,11 +68,11 @@ public class Pelaaja {
     
     
     
-    public ArrayList<String> ketkaJuo(ArrayList<String> kaikkiJotkaJuovat){
-        kaikkiJotkaJuovat.add(this.nimi);
+    public ArrayList<Pelaaja> ketkaJuo(ArrayList<Pelaaja> kaikkiJotkaJuovat){
+        kaikkiJotkaJuovat.add(this);
 //        ArrayList<Pelaaja> kaikkiJotkaJuovat = new ArrayList<>();
         for (Pelaaja p : this.mates) {
-            if(!kaikkiJotkaJuovat.contains(p.getNimi())){
+            if(!kaikkiJotkaJuovat.contains(p)){
                 p.ketkaJuo(kaikkiJotkaJuovat);
             }
         }

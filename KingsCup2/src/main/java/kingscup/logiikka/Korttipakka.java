@@ -61,5 +61,11 @@ public class Korttipakka {
         }
         return kortteja;
     }
+
+    public HashMap<Integer, Integer> getKorttienMaarat() {
+        return korttienMaarat;
+    }
+    
+    
     
 }
