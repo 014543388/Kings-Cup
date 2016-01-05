@@ -40,3 +40,10 @@ Aikaa kulutettu yhteensä noin 2h
 -graafisen käyttöliittymän aloitus
 -JavaDocin aloitus (tosi keskeneräinen)
 2h
+
+5.1.2016
+-lisää testejä logiikalle sekä uudet kattavat testit korteille 7&8
+-refaktorointia, sommittelua, suunnittelua
+-bugien fiksaamista (juomistoiminto toimii halutusti)
+2.5h
+
