@@ -14,6 +14,10 @@ public class Kymmenen extends Kortti {
         lisaaKysymykset();
         this.lukija = lukija;
     }
+    
+    public int kysymyksiaJaljella(){
+        return this.enolekoskaan.getKysymykset().size();
+    }
 
     private void lisaaKysymykset() {
         enolekoskaan.lisaaKysymys("oppinut uimaan");
@@ -31,7 +35,6 @@ public class Kymmenen extends Kortti {
         enolekoskaan.lisaaKysymys("juosssut maratonia");
         enolekoskaan.lisaaKysymys("esiintynyt suurelle yleisölle");
         enolekoskaan.lisaaKysymys("uinut avannossa");
-
     }
 
     @Override

@@ -23,7 +23,13 @@ public class Yhdeksan extends Kortti{
                 + " on keksittävä riimi tälle sanalle. Tämä jatkuu, kunnes"
                 + "joku ei riimiä tai jo sanottu sana tulee uudestaan. Mokaaja juo.");
         System.out.print("mokaaja: ");
-        pelaajat.get(lukija.nextLine()).juo();
+        String juoja = lukija.nextLine();
+        while(!pelaajat.containsKey(juoja)){
+            System.out.print("pelaaja ei mukana pelissä. Kuka juo? ");
+            juoja = lukija.nextLine();
+        }
+        
+        pelaajat.get(juoja).juo();
     }
     
 }

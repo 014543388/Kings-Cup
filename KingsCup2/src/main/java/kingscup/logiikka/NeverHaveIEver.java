@@ -17,13 +17,12 @@ public class NeverHaveIEver {
         return kysymykset;
     }
     
-    
-    
     public void lisaaKysymys(String kysymys){
         this.kysymykset.add(kysymys);
     }
     
     public String kysySeuraava(){
+        if(this.kysymykset.isEmpty())return null;
         return "I have never/en ole koskaan " + this.kysymykset.remove(random.nextInt(kysymykset.size()));
     }
     
