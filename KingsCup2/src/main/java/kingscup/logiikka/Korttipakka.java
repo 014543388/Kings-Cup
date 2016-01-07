@@ -5,8 +5,6 @@ import kingscup.kortit.Kortti;
 import java.util.HashMap;
 import java.util.Random;
 import java.util.Scanner;
-import kingscup.kortit.Assa;
-import kingscup.kortit.Kaksi;
 import kingscup.kortit.Loppukortti;
 
 
