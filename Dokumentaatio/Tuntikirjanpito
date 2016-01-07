@@ -47,3 +47,19 @@ Aikaa kulutettu yhteensä noin 2h
 -bugien fiksaamista (juomistoiminto toimii halutusti)
 2.5h
 
+6.1.2016
+-vähän logiikkaa (mm. neverhaveiever luokka valmiiksi)
+-refaktorointia
+-lisäyksiä korttiluokkiin
+1h
+
+7.1.2016
+-Käyttöliittymän toteutus (lähes lopullinen)
+-Pelaajaikkunan suunnittelu ja toteutus
+-Olioiden ja niiden operoinnin yhteensovitus käyttöliittymiin
+-tekstien editointia ja luomista korttiluokkiin, pelinäkymään jne.
+-refaktorointia
+-lopullinen kunnostus demoa varten
+4h
+
+
