@@ -87,13 +87,13 @@ public class Pelaaja {
         if(this.mates.size()>0){
             bitches = "";
             for (Pelaaja p : this.mates) {
-                bitches += p.getNimi()+", ";
+                bitches += "\n"+p.getNimi();
             }
-            bitches = bitches.substring(0, bitches.length()-2);
+            bitches = bitches.substring(0, bitches.length());
             
-            return this.nimi+"\nBitches: "+bitches;
+            return this.nimi+"\n\nJuonut yhteensä: "+ juonut +"\n\nMates: "+bitches;
         }
-        return this.nimi+"\nBitches: " + bitches;
+        return this.nimi+"\n\nJuonut yhteensä: "+ juonut +"\n\nMates: " + bitches;
     }
     
     

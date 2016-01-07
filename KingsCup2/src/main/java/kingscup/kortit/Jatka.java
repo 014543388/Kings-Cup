@@ -23,7 +23,14 @@ public class Jatka extends Kortti{
                 + "Ensimmäinen, joka ei keksi uutta, juo. Esim. Kategoria: Virvoitusjuomat"
                 + " Olioita: Pepsi, Jaffa, Sprite...");
         System.out.print("mokaaja: ");
-        pelaajat.get(lukija.nextLine()).juo();
+        String juoja = lukija.nextLine();
+        
+        while(!pelaajat.containsKey(juoja)){
+            System.out.println("pelaaja ei mukana pelissä. Kuka juo? ");
+            juoja = lukija.nextLine();
+        }
+        
+        pelaajat.get(juoja).juo();
     }
     
 }
