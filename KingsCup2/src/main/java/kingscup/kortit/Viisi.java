@@ -19,6 +19,7 @@ public class Viisi extends Kortti{
 
     @Override
     public void suorita() {
+        System.out.println("5:");
         System.out.println("Five is Jive\nNostaja tekee tanssiliikeen käsillään."
                 + " Seuraava kopioi liikkeen ja lisää siihen uuden liikkeen. Ensimmäinen,"
                 + " joka unohtaa tähänastisen liikkeen, juo.");

@@ -2,9 +2,8 @@
 package kingscup.kortit;
 
 import java.util.HashMap;
-import static kingscup.logiikka.KingsCup.Sukupuoli.MIES;
-import static kingscup.logiikka.KingsCup.Sukupuoli.NAINEN;
 import kingscup.logiikka.Pelaaja;
+import static kingscup.logiikka.Sukupuoli.MIES;
 
 
 public class Kuusi extends Kortti{
@@ -18,6 +17,7 @@ public class Kuusi extends Kortti{
 
     @Override
     public void suorita() {
+        System.out.println("6:");
         System.out.println("Miehet juovat");
         for(String s : pelaajat.keySet()){
             if(pelaajat.get(s).getSukupoli() == MIES){

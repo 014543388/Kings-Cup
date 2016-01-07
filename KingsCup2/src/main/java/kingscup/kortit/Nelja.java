@@ -2,8 +2,8 @@
 package kingscup.kortit;
 
 import java.util.HashMap;
-import static kingscup.logiikka.KingsCup.Sukupuoli.NAINEN;
 import kingscup.logiikka.Pelaaja;
+import static kingscup.logiikka.Sukupuoli.NAINEN;
 
 
 public class Nelja extends Kortti{
@@ -15,6 +15,7 @@ public class Nelja extends Kortti{
     
     @Override
     public void suorita() {
+        System.out.println("4:");
         System.out.println("Naiset juovat");
         for(String s : pelaajat.keySet()){
             if(pelaajat.get(s).getSukupoli() == NAINEN){

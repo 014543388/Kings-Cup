@@ -21,16 +21,13 @@ import kingscup.kortit.Nelja;
 import kingscup.kortit.Seitseman;
 import kingscup.kortit.Viisi;
 import kingscup.kortit.Yhdeksan;
-import static kingscup.logiikka.KingsCup.Sukupuoli.MIES;
-import static kingscup.logiikka.KingsCup.Sukupuoli.NAINEN;
+import static kingscup.logiikka.Sukupuoli.MIES;
 import kingscup.pelaajaikkuna.Pelaajaikkuna;
 
 public class KingsCup {
     private static Scanner lukija = new Scanner(System.in);
     
-    public enum Sukupuoli{
-        MIES, NAINEN;
-    }
+    
     
     public void luoPeli(ArrayList<Pelaaja> pelaajat){
         HashMap<String, Pelaaja> pelaajaHash = new HashMap<>();

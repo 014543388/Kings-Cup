@@ -3,8 +3,8 @@ package kingscup.logiikka;
 
 
 import java.util.ArrayList;
-import static kingscup.logiikka.KingsCup.Sukupuoli.MIES;
 import kingscup.logiikka.Pelaaja;
+import static kingscup.logiikka.Sukupuoli.MIES;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;

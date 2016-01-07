@@ -13,6 +13,7 @@ public class Assa extends Kortti{
     
     @Override
     public void suorita() {
+        System.out.println("Ässä:");
         System.out.println("WATERFALL!");
         
         //kellota

@@ -20,6 +20,7 @@ public class Seitseman extends Kortti{
     
     @Override
     public void suorita() {
+        System.out.println("7:");
         System.out.println("7 is Heaven. Nostajasta tulee HeavenMaster. kun HM nostaa"
                 + "kätensä ilmaan, viimeinen kätensä ilmaan nostanut juo. Kertakäyttöinen. "
                 + "Valta katoaa seuraavan 7 ilmaantuessa");

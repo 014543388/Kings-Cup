@@ -39,6 +39,8 @@ public class Kymmenen extends Kortti {
 
     @Override
     public void suorita() {
+        System.out.println("10: ");
+        System.out.println("Never-Have-I-Ever (5 kierrosta)");
         if (this.enolekoskaan.getKysymykset().isEmpty()) {
             System.out.println("Kysymykset ovat loppu");
         } else {

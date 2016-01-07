@@ -19,9 +19,10 @@ public class Yhdeksan extends Kortti{
 
     @Override
     public void suorita() {
+        System.out.println("9:");
         System.out.println("Nine is Rhyme\nNostaja sanoo jonkin sanan. Seuraavan"
-                + " on keksittävä riimi tälle sanalle. Tämä jatkuu, kunnes"
-                + "joku ei riimiä tai jo sanottu sana tulee uudestaan. Mokaaja juo.");
+                + " on keksittävä riimi tälle sanalle.\n Tämä jatkuu, kunnes"
+                + "joku ei riimiä tai jo sanottu sana tulee uudestaan.\n Mokaaja juo.");
         System.out.print("mokaaja: ");
         String juoja = lukija.nextLine();
         while(!pelaajat.containsKey(juoja)){

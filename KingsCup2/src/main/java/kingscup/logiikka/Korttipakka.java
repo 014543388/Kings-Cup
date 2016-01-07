@@ -7,6 +7,7 @@ import java.util.Random;
 import java.util.Scanner;
 import kingscup.kortit.Assa;
 import kingscup.kortit.Kaksi;
+import kingscup.kortit.Loppukortti;
 
 
 public class Korttipakka {
@@ -49,7 +50,7 @@ public class Korttipakka {
     
     public Kortti nostaKortti(int i){
         if(i<1||i>kortit.keySet().size())return null;
-        if(korttienMaarat.get(i)==0)return null;
+        if(korttienMaarat.get(i)==0)return new Loppukortti();
         korttienMaarat.put(i, korttienMaarat.get(i)-1);
         return kortit.get(i);
     }

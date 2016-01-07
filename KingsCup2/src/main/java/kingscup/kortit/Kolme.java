@@ -22,7 +22,7 @@ public class Kolme extends Kortti{
         String juoja = lukija.nextLine();
         
         while(!pelaajat.containsKey(juoja)){
-            System.out.println("pelaaja ei mukana pelissä. Kuka juo? ");
+            System.out.print("pelaaja ei mukana pelissä. Kuka juo? ");
             juoja = lukija.nextLine();
         }
         

@@ -2,7 +2,6 @@
 package kingscup.logiikka;
 
 import java.util.ArrayList;
-import kingscup.logiikka.KingsCup.Sukupuoli;
 
 
 public class Pelaaja {

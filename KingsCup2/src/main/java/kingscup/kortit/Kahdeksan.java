@@ -16,6 +16,7 @@ public class Kahdeksan extends Kortti {
 
     @Override
     public void suorita() {
+        System.out.println("8:");
         System.out.println("Eight is Mate\nNostaja valitsee itselleen kaverin. Kaveria ei jätetä!");
         System.out.print("Nostaja: ");
         String nostaja = lukija.nextLine();

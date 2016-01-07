@@ -18,15 +18,16 @@ public class Jatka extends Kortti{
     
     @Override
     public void suorita() {
-        System.out.println("Kategoriat\nNostaja keksii kategorian. Jokainen sanoo "
-                + "vuoron perään jonkin kyseiseen kategoriaan liittyvän olion. "
-                + "Ensimmäinen, joka ei keksi uutta, juo. Esim. Kategoria: Virvoitusjuomat"
+        System.out.println("Jätkä:");
+        System.out.println("Kategoriat\nNostaja keksii kategorian.\n Jokainen sanoo "
+                + "vuoron perään jonkin kyseiseen kategoriaan liittyvän olion.\n "
+                + "Ensimmäinen, joka ei keksi uutta, juo.\n Esim. Kategoria: Virvoitusjuomat"
                 + " Olioita: Pepsi, Jaffa, Sprite...");
         System.out.print("mokaaja: ");
         String juoja = lukija.nextLine();
         
         while(!pelaajat.containsKey(juoja)){
-            System.out.println("pelaaja ei mukana pelissä. Kuka juo? ");
+            System.out.print("pelaaja ei mukana pelissä. Kuka juo? ");
             juoja = lukija.nextLine();
         }
         

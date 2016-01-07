@@ -19,6 +19,7 @@ public class Kuningas extends Kortti{
 
     @Override
     public void suorita() {
+        System.out.println("Kuningas:");
         if(suorituksia < 3){
             System.out.println("Its the Kings Cup\nNostaja kaataa kuppiin juotavaa ja"
                     + " keksii uuden säännön. Jos sääntöä rikkoo, juo.");

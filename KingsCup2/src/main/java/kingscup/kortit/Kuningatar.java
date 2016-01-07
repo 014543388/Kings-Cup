@@ -19,6 +19,7 @@ public class Kuningatar extends Kortti{
 
     @Override
     public void suorita() {
+        System.out.println("Kuningatar:");
         System.out.println("Question master\nNostajasta tulee Question master"
                 + " kunnes joku toinen nostaa kuningattaren");
         System.out.print("Question master: ");

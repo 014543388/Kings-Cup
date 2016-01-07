@@ -93,6 +93,10 @@ public class Pelilauta implements Runnable {
             container.add(kuningatar);
             container.add(kuningas);
             
+            JButton satunnainenKorttiNappi = new JButton("Random kortti");
+            satunnainenKorttiNappi.addActionListener(new RandomNapinKuuntelija(pakka));
+            container.add(satunnainenKorttiNappi);
+            
             JButton pelaajanappi;
             for(Pelaaja p : pelaajat){
                 pelaajanappi = new JButton("Pelaaja: "+p.getNimi());

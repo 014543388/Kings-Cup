@@ -6,6 +6,8 @@ import kingscup.kortit.Kortti;
 import kingscup.kortit.Nelja;
 import kingscup.logiikka.KingsCup;
 import kingscup.logiikka.Pelaaja;
+import static kingscup.logiikka.Sukupuoli.MIES;
+import static kingscup.logiikka.Sukupuoli.NAINEN;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -34,8 +36,8 @@ public class NeljaTest {
     @Before
     public void setUp() {
         pelaajat = new HashMap<>();
-        evan = new Pelaaja("Evan", KingsCup.Sukupuoli.MIES);
-        hoami = new Pelaaja("hoami", KingsCup.Sukupuoli.NAINEN);
+        evan = new Pelaaja("Evan", MIES);
+        hoami = new Pelaaja("hoami", NAINEN);
         pelaajat.put(evan.getNimi(), evan);
         pelaajat.put(hoami.getNimi(), hoami);
         
