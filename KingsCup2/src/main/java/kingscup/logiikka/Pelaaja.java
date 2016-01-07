@@ -36,6 +36,12 @@ public class Pelaaja {
         return juonut;
     }
     
+    
+    /**
+     * Kasvattaa tämän olion sekä, jokaisen olion maten (myös epäsuoran)
+     * juonut-arvoa yhdellä. Käyttää ketkäjuo-apumetodia.
+     * 
+     */
     public void juo(){
         ArrayList<Pelaaja> juojat = ketkaJuo(new ArrayList<Pelaaja>());
         for(Pelaaja p : juojat){
@@ -43,9 +49,21 @@ public class Pelaaja {
         }
     }
     
+    /**
+     * Kasvattaa juuri tämän olion
+     * juonut-arvoa yhdellä.
+     * 
+     */
+    
     private void huikka(){
         juonut++;
     }
+    
+    /**
+     * muuttaa
+     * @param lisättävien juomien määrä
+     * 
+     */
     
     public void juoMonta(int kuinkaMonta){
         juonut += kuinkaMonta;
@@ -69,7 +87,6 @@ public class Pelaaja {
     
     public ArrayList<Pelaaja> ketkaJuo(ArrayList<Pelaaja> kaikkiJotkaJuovat){
         kaikkiJotkaJuovat.add(this);
-//        ArrayList<Pelaaja> kaikkiJotkaJuovat = new ArrayList<>();
         for (Pelaaja p : this.mates) {
             if(!kaikkiJotkaJuovat.contains(p)){
                 p.ketkaJuo(kaikkiJotkaJuovat);

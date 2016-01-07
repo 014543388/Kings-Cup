@@ -23,7 +23,7 @@ public class Kuningas extends Kortti{
         if(suorituksia < 3){
             System.out.println("Its the Kings Cup\nNostaja kaataa kuppiin juotavaa ja"
                     + " keksii uuden säännön. Jos sääntöä rikkoo, juo.");
-            System.out.println("Sääntö: ");
+            System.out.print("Sääntö: ");
             saannot.add(lukija.nextLine());
         } else {
             System.out.println("Its the Kings Cup\nNostaja juo kupin sisällön");
@@ -31,5 +31,11 @@ public class Kuningas extends Kortti{
         suorituksia++;
         
     }
+
+    public ArrayList<String> getSaannot() {
+        return saannot;
+    }
+    
+    
     
 }

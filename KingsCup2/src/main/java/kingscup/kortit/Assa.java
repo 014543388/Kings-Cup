@@ -6,9 +6,11 @@ import java.util.Scanner;
 
 public class Assa extends Kortti{
     private Scanner lukija;
+    
 
     public Assa(Scanner lukija) {
         this.lukija = lukija;
+        nimi = "Ässä";
     }
     
     @Override
@@ -18,6 +20,11 @@ public class Assa extends Kortti{
         
         //kellota
     }
+
+    public String getNimi() {
+        return nimi;
+    }
+    
 
     
     

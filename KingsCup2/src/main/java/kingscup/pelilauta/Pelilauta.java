@@ -5,6 +5,7 @@ import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.util.ArrayList;
+import java.util.HashMap;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -15,10 +16,10 @@ import kingscup.logiikka.Pelaaja;
 
 public class Pelilauta implements Runnable {
     private Korttipakka pakka;
-    private ArrayList<Pelaaja> pelaajat;
+    private HashMap<String, Pelaaja> pelaajat;
     private JFrame frame;
 
-    public Pelilauta(Korttipakka pakka, ArrayList<Pelaaja> pelaajat) {
+    public Pelilauta(Korttipakka pakka, HashMap<String, Pelaaja> pelaajat) {
         this.pakka = pakka;
         this.pelaajat = pelaajat;
     }
@@ -98,7 +99,7 @@ public class Pelilauta implements Runnable {
             container.add(satunnainenKorttiNappi);
             
             JButton pelaajanappi;
-            for(Pelaaja p : pelaajat){
+            for(Pelaaja p : pelaajat.values()){
                 pelaajanappi = new JButton("Pelaaja: "+p.getNimi());
                 pelaajanappi.addActionListener(new PelaajanapinKuuntelija(p));
                 container.add(pelaajanappi);

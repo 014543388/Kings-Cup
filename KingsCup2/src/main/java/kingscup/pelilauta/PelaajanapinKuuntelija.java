@@ -4,6 +4,7 @@ package kingscup.pelilauta;
 import kingscup.pelaajaikkuna.Pelaajaikkuna;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JTextArea;
 import javax.swing.SwingUtilities;
 import kingscup.logiikka.Pelaaja;
 
@@ -12,6 +13,7 @@ import kingscup.logiikka.Pelaaja;
  * @author eamiller
  */
 public class PelaajanapinKuuntelija implements ActionListener{
+    private JTextArea tekstinakyma;
     private Pelaaja pelaaja;
 
     public PelaajanapinKuuntelija(Pelaaja pelaaja) {

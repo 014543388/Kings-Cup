@@ -50,7 +50,7 @@ public class KingsCup {
         kortit.put(12, new Kuningatar(lukija, pelaajaHash));
         kortit.put(13, new Kuningas(lukija));
         
-        Pelilauta lauta = new Pelilauta(new Korttipakka(kortit), pelaajat);
+        Pelilauta lauta = new Pelilauta(new Korttipakka(kortit), pelaajaHash);
 
         SwingUtilities.invokeLater(lauta);
 //        Peli perusPeli = new Peli(new Korttipakka(kortit), pelaajaHash);
@@ -59,42 +59,8 @@ public class KingsCup {
 
     public static void main(String[] args) {
         
-        
-        Pelaaja evan = new Pelaaja("Evan", MIES);
-        Pelaaja houm = new Pelaaja("hoami", MIES);
-        Pelaaja mati = new Pelaaja("mati", MIES);
-        
-        ArrayList<Pelaaja> pelaajat = new ArrayList<>();
-        pelaajat.add(evan);
-        pelaajat.add(houm);
-        pelaajat.add(mati);
-        
-        HashMap<String, Pelaaja> pelaajaHash = new HashMap<>();
-        for(Pelaaja p : pelaajat){
-            pelaajaHash.put(p.getNimi(), p);
-        }
-        HashMap<Integer, Kortti> kortit = new HashMap<>();
-        kortit.put(1, new Assa(lukija));
-        kortit.put(2, new Kaksi(lukija, pelaajaHash));
-        kortit.put(3, new Kolme(lukija, pelaajaHash));
-        kortit.put(4, new Nelja(pelaajaHash));
-        kortit.put(4, new Nelja(pelaajaHash));
-        kortit.put(5, new Viisi(lukija, pelaajaHash));
-        kortit.put(6, new Kuusi(pelaajaHash));
-        kortit.put(7, new Seitseman(lukija, pelaajaHash));
-        kortit.put(8, new Kahdeksan(lukija, pelaajaHash));
-        kortit.put(9, new Yhdeksan(lukija, pelaajaHash));
-        kortit.put(10, new Kymmenen(lukija));
-        kortit.put(11, new Jatka(lukija, pelaajaHash));
-        kortit.put(12, new Kuningatar(lukija, pelaajaHash));
-        kortit.put(13, new Kuningas(lukija));
-        
-        Pelilauta lauta = new Pelilauta(new Korttipakka(kortit), pelaajat);
-
-        SwingUtilities.invokeLater(lauta);
-        
-        
-        
+        Peli peli = new Peli(lukija);
+        peli.aloitaPeli();
         
         
         
