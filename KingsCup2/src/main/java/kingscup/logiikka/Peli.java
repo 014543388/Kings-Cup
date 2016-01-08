@@ -32,8 +32,8 @@ public class Peli {
         this.lukija = lukija;
         this.pelaajat = new HashMap<>();
     }
-    
-    private Korttipakka luoKorttipakka(HashMap<String, Pelaaja> pelaajaHash){
+
+    private Korttipakka luoKorttipakka(HashMap<String, Pelaaja> pelaajaHash) {
         HashMap<Integer, Kortti> kortit = new HashMap<>();
         kortit.put(1, new Assa(lukija));
         kortit.put(2, new Kaksi(lukija, pelaajaHash));
@@ -49,38 +49,52 @@ public class Peli {
         kortit.put(11, new Jatka(lukija, pelaajaHash));
         kortit.put(12, new Kuningatar(lukija, pelaajaHash));
         kortit.put(13, new Kuningas(lukija));
-        
+
         return new Korttipakka(kortit);
     }
 
     public void aloitaPeli() {
         System.out.println("Ketkä pelaavat? (Enter aloittaa pelin)");
+        int pelaajia = 0;
+        boolean kysySukupuoli;
 
         while (true) {
+            kysySukupuoli = true;
             System.out.print("Nimi: ");
             String nimi = lukija.nextLine();
             if (nimi.equals("")) {
-                System.out.println("");
-                break;
+                if (pelaajia >= 2) {
+                    System.out.println("");
+                    break;
+                } else {
+                    System.out.println("Tarvitaan vähintään 2 pelaajaa");
+                    System.out.println("");
+                    kysySukupuoli = false;
+                }
+
             }
 
-            System.out.print("Sukupuoli (m/n): ");
-            String sukupuoli = lukija.nextLine();
-            if (sukupuoli.startsWith("m")) {
-                this.pelaajat.put(nimi, new Pelaaja(nimi, MIES));
-            } else if (sukupuoli.startsWith("n")) {
-                this.pelaajat.put(nimi, new Pelaaja(nimi, NAINEN));
+            if (kysySukupuoli) {
+                System.out.print("Sukupuoli (m/n): ");
+                String sukupuoli = lukija.nextLine();
+                
+                if (sukupuoli.startsWith("m")) {
+                    this.pelaajat.put(nimi, new Pelaaja(nimi, MIES));
+                    pelaajia++;
+                } else if (sukupuoli.startsWith("n")) {
+                    this.pelaajat.put(nimi, new Pelaaja(nimi, NAINEN));
+                    pelaajia++;
+                }
+                System.out.println("");
             }
-            System.out.println("");
+
         }
-        
+
         this.pakka = luoKorttipakka(pelaajat);
         Pelilauta lauta = new Pelilauta(pakka, pelaajat);
-        
+
         SwingUtilities.invokeLater(lauta);
 
-        
-        
     }
 
 }

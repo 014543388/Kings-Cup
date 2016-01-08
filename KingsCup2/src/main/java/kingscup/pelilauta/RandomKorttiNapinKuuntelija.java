@@ -9,10 +9,10 @@ import kingscup.logiikka.Korttipakka;
  *
  * @author eamiller
  */
-public class RandomNapinKuuntelija implements ActionListener{
+public class RandomKorttiNapinKuuntelija implements ActionListener{
     Korttipakka pakka;
 
-    public RandomNapinKuuntelija(Korttipakka pakka) {
+    public RandomKorttiNapinKuuntelija(Korttipakka pakka) {
         this.pakka = pakka;
     }
     

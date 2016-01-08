@@ -39,11 +39,12 @@ public class Pelaajaikkuna implements Runnable{
         GridLayout layout = new GridLayout(1, 2);
         container.setLayout(layout);
         
-        container.add(new JTextArea(pelaaja.toString()));
-        JButton juoNappi = new JButton("juo");
-        ActionListener juomanapinKuuntelija = new JuomanapinKuuntelija(pelaaja);
-        juoNappi.addActionListener(juomanapinKuuntelija);
+        JTextArea teksti = new JTextArea(pelaaja.toString());
+        container.add(teksti);
         
+        JButton juoNappi = new JButton("juo");
+        ActionListener juomanapinKuuntelija = new JuomanapinKuuntelija(pelaaja, teksti);
+        juoNappi.addActionListener(juomanapinKuuntelija);
         container.add(juoNappi);
     }
     

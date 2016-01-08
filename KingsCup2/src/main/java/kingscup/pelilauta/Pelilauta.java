@@ -10,6 +10,8 @@ import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 import javax.swing.WindowConstants;
 import kingscup.logiikka.Korttipakka;
 import kingscup.logiikka.Pelaaja;
@@ -41,44 +43,46 @@ public class Pelilauta implements Runnable {
         GridLayout layout = new GridLayout(5, 4);
         container.setLayout(layout);
         
+        JTextField saannotTekstina = new JTextField("SÄÄNNÖT");
+        
         JButton assa = new JButton("Ässä");
-        assa.addActionListener(new KorttinapinKuuntelija(pakka, 1));
+        assa.addActionListener(new KorttinapinKuuntelija(saannotTekstina,pakka, 1));
         
         JButton kaksi = new JButton("Kaksi");
-        kaksi.addActionListener(new KorttinapinKuuntelija(pakka, 2));
+        kaksi.addActionListener(new KorttinapinKuuntelija(saannotTekstina,pakka, 2));
         
         JButton kolme = new JButton("Kolme");
-        kolme.addActionListener(new KorttinapinKuuntelija(pakka, 3));
+        kolme.addActionListener(new KorttinapinKuuntelija(saannotTekstina,pakka, 3));
         
         JButton nelja = new JButton("Neljä");
-        nelja.addActionListener(new KorttinapinKuuntelija(pakka, 4));
+        nelja.addActionListener(new KorttinapinKuuntelija(saannotTekstina,pakka, 4));
         
         JButton viisi = new JButton("Viisi");
-        viisi.addActionListener(new KorttinapinKuuntelija(pakka, 5));
+        viisi.addActionListener(new KorttinapinKuuntelija(saannotTekstina,pakka, 5));
         
         JButton kuusi = new JButton("Kuusi");
-        kuusi.addActionListener(new KorttinapinKuuntelija(pakka, 6));
+        kuusi.addActionListener(new KorttinapinKuuntelija(saannotTekstina,pakka, 6));
         
         JButton seitseman = new JButton("Seitsemän");
-        seitseman.addActionListener(new KorttinapinKuuntelija(pakka, 7));
+        seitseman.addActionListener(new KorttinapinKuuntelija(saannotTekstina,pakka, 7));
         
         JButton kahdeksan = new JButton("Kahdeksan");
-        kahdeksan.addActionListener(new KorttinapinKuuntelija(pakka, 8));
+        kahdeksan.addActionListener(new KorttinapinKuuntelija(saannotTekstina,pakka, 8));
         
         JButton yhdeksan = new JButton("Yhdeksän");
-        yhdeksan.addActionListener(new KorttinapinKuuntelija(pakka, 9));
+        yhdeksan.addActionListener(new KorttinapinKuuntelija(saannotTekstina,pakka, 9));
         
         JButton kymmenen = new JButton("Kymmenen");
-        kymmenen.addActionListener(new KorttinapinKuuntelija(pakka, 10));
+        kymmenen.addActionListener(new KorttinapinKuuntelija(saannotTekstina,pakka, 10));
         
         JButton jatka = new JButton("Jätkä");
-        jatka.addActionListener(new KorttinapinKuuntelija(pakka, 11));
+        jatka.addActionListener(new KorttinapinKuuntelija(saannotTekstina,pakka, 11));
         
         JButton kuningatar = new JButton("Kuningatar");
-        kuningatar.addActionListener(new KorttinapinKuuntelija(pakka, 12));
+        kuningatar.addActionListener(new KorttinapinKuuntelija(saannotTekstina,pakka, 12));
         
         JButton kuningas = new JButton("Kuningas");
-        kuningas.addActionListener(new KorttinapinKuuntelija(pakka, 13));
+        kuningas.addActionListener(new KorttinapinKuuntelija(saannotTekstina,pakka, 13));
 
             container.add(assa);
             container.add(kaksi);
@@ -94,8 +98,9 @@ public class Pelilauta implements Runnable {
             container.add(kuningatar);
             container.add(kuningas);
             
+            
             JButton satunnainenKorttiNappi = new JButton("Random kortti");
-            satunnainenKorttiNappi.addActionListener(new RandomNapinKuuntelija(pakka));
+            satunnainenKorttiNappi.addActionListener(new RandomKorttiNapinKuuntelija(pakka));
             container.add(satunnainenKorttiNappi);
             
             JButton pelaajanappi;
@@ -104,6 +109,8 @@ public class Pelilauta implements Runnable {
                 pelaajanappi.addActionListener(new PelaajanapinKuuntelija(p));
                 container.add(pelaajanappi);
             }
+            
+            container.add(saannotTekstina);
     }
 
 }
