@@ -15,7 +15,6 @@ public class Pelaaja {
         this.nimi = nimi;
         this.mates = new ArrayList<Pelaaja>();
         juonut = 0;
-//        this.masters = new ArrayList<Pelaaja>();
     }
     
     /**
@@ -38,9 +37,11 @@ public class Pelaaja {
     
     
     /**
-     * Kasvattaa tämän olion sekä, jokaisen olion maten (myös epäsuoran)
-     * juonut-arvoa yhdellä. Käyttää ketkäjuo-apumetodia.
+     * Kasvattaa tämän olion sekä, jokaisen olion maten (myös epäsuoran maten)
+     * juonut-arvoa yhdellä. Käyttää ketkaJuo-apumetodia.
      * 
+     * 
+     * @see kingscup.logiikka.Pelaaja.ketkaJuo()
      */
     public void juo(){
         ArrayList<Pelaaja> juojat = ketkaJuo(new ArrayList<Pelaaja>());
@@ -54,17 +55,17 @@ public class Pelaaja {
      * juonut-arvoa yhdellä.
      * 
      */
-    
     private void huikka(){
         juonut++;
     }
     
     /**
-     * muuttaa
+     * Kasvattaa juuri tämmän olion juonut-arvoa
+     * annetulla määrällä
+     * 
      * @param lisättävien juomien määrä
      * 
      */
-    
     public void juoMonta(int kuinkaMonta){
         juonut += kuinkaMonta;
     }
@@ -77,6 +78,10 @@ public class Pelaaja {
         return nimi;
     }
     
+    /**
+     * Lisää pelaajalle maten (toisen pelaajan)
+     * @param mateksi asetettava pelaaja
+     */
     public void newMate(Pelaaja pelaaja){
         if(this==pelaaja)return;
         if(this.mates.contains(pelaaja))return;
@@ -84,7 +89,12 @@ public class Pelaaja {
     }
     
     
-    
+    /**
+     * Selvittää rekursiivisesti, keiden kaikkien tulee juoda
+     * tämän pelaajan juodessa mate-ketjujen johdosta
+     * 
+     * @param aluksi tyhjä ArrayList, jota rekursio täyttää
+     */
     public ArrayList<Pelaaja> ketkaJuo(ArrayList<Pelaaja> kaikkiJotkaJuovat){
         kaikkiJotkaJuovat.add(this);
         for (Pelaaja p : this.mates) {
@@ -96,7 +106,9 @@ public class Pelaaja {
     }
     
     
-
+    /**
+     * Pelaajan GUI-ikkunassa näkyvä teksti
+     */
     @Override
     public String toString() {
         String bitches = "none";

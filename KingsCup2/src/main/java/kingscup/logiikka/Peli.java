@@ -1,6 +1,5 @@
 package kingscup.logiikka;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Scanner;
 import javax.swing.SwingUtilities;
@@ -32,7 +31,13 @@ public class Peli {
         this.lukija = lukija;
         this.pelaajat = new HashMap<>();
     }
-
+    
+    /**
+     * Luo pelin korttipakan
+     * 
+     * @param pelissä mukana olevat pelaajat
+     * @return luotu pakka
+     */
     private Korttipakka luoKorttipakka(HashMap<String, Pelaaja> pelaajaHash) {
         HashMap<Integer, Kortti> kortit = new HashMap<>();
         kortit.put(1, new Assa(lukija));
@@ -52,7 +57,10 @@ public class Peli {
 
         return new Korttipakka(kortit);
     }
-
+    
+    /**
+     * pelin tekstuaalinen käyttöliittymälogiikka
+     */
     public void aloitaPeli() {
         System.out.println("Ketkä pelaavat? (Enter aloittaa pelin)");
         int pelaajia = 0;

@@ -21,6 +21,10 @@ public class Korttipakka {
         random = new Random();
     }
     
+    
+    /**
+     * Lisää virtuaaliseen korttipakkaan yhden pakan verran kortteja
+     */
     private void pakanLisays(){
         for(int i = 1; i < kortit.keySet().size()+1;i++){
             if(korttienMaarat.containsKey(i)){
@@ -28,13 +32,15 @@ public class Korttipakka {
             }else{
                 korttienMaarat.put(i, 4);
             }
-            
         }
-        //lisää kortit hashmappiin tassa?
     }
     
     
-    
+    /**
+     * Poistaa ja palauttaa pakasta satunnaisen kortin
+     * 
+     * @return jokin pakassa olave kortti
+     */
     public Kortti nostaSatunnainenKortti(){
         int eriKortteja = kortit.keySet().size();
         int kortinNumero = random.nextInt(eriKortteja) + 1;
@@ -46,6 +52,14 @@ public class Korttipakka {
         return kortit.get(kortinNumero);
     }
     
+    /**
+     * Poistaa ja palauttaa pakasta tietyn kortin. Palauttaa null,
+     * jos kyseinen kortti on loppunut pakasta, tai jos parametri ei ole
+     * mahdollinen kortin arvo.
+     * 
+     * @param numero (välillä 1-13)
+     * @return annettua numeroa vastaava kortti
+     */
     public Kortti nostaKortti(int i){
         if(i<1||i>kortit.keySet().size())return null;
         if(korttienMaarat.get(i)==0)return new Loppukortti();
@@ -53,6 +67,10 @@ public class Korttipakka {
         return kortit.get(i);
     }
     
+    
+    /**
+     * @return pakassa tällä hetkellä olevien korttien määrä
+     */
     public int korttejaYhteensa(){
         int kortteja = 0;
         for(int i : korttienMaarat.keySet()){
