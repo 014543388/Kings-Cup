@@ -7,6 +7,7 @@ import java.util.Scanner;
 import kingscup.kortit.Assa;
 import kingscup.kortit.Kaksi;
 import kingscup.kortit.Kortti;
+import kingscup.kortit.Loppukortti;
 import kingscup.logiikka.Korttipakka;
 import kingscup.logiikka.Pelaaja;
 import org.junit.After;
@@ -73,5 +74,37 @@ public class KorttipakkaTest {
         assertEquals(kakkosia, 3);
     }
     
+    @Test
+    public void palauttaaNullJosNostaaSatunnaisenTyhjastaPakasta(){
+        HashMap<String, Pelaaja> pelaajaHash = new HashMap<>();
+        HashMap<Integer, Kortti> kortit = new HashMap<>();
+        pakka = new Korttipakka(kortit);
+        assertEquals(pakka.nostaSatunnainenKortti(), null);
+    }
+    
+    @Test
+    public void palauttaaLoppukortinJosNostetaanLoppunutKortti(){
+        Kortti assa = pakka.nostaKortti(1);
+        pakka.nostaKortti(1);
+        pakka.nostaKortti(1);
+        pakka.nostaKortti(1);
+        assertTrue(pakka.nostaKortti(1)!=assa);
+    }
+    
+    @Test
+    public void nostaKorttiNostaaOikeanKortin(){
+        HashMap<String, Pelaaja> pelaajaHash = new HashMap<>();
+        HashMap<Integer, Kortti> kortit = new HashMap<>();
+        kortit.put(1, new Assa(lukija));
+        kortit.put(2, new Kaksi(lukija, pelaajaHash));
+        
+        pakka = new Korttipakka(kortit);
+        assertEquals(pakka.nostaKortti(1), kortit.get(1));
+    }
+    
+    @Test
+    public void nostaKorttiPaluttaaNullJosIndeksiHuono(){
+        assertEquals(pakka.nostaKortti(0), null);
+    }
     
 }

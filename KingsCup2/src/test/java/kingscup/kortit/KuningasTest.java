@@ -1,12 +1,10 @@
 
 package kingscup.kortit;
 
+
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.util.HashMap;
 import java.util.Scanner;
-import kingscup.logiikka.Pelaaja;
-import static kingscup.logiikka.Sukupuoli.MIES;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -14,13 +12,14 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-
-public class YhdeksanTest {
+/**
+ *
+ * @author eamiller
+ */
+public class KuningasTest {
     ByteArrayOutputStream tulosvirta;
-    HashMap<String, Pelaaja> pelaajaHash;
-    Pelaaja evan;
     
-    public YhdeksanTest() {
+    public KuningasTest() {
     }
     
     @BeforeClass
@@ -35,10 +34,6 @@ public class YhdeksanTest {
     public void setUp() {
         tulosvirta = new ByteArrayOutputStream();
         System.setOut(new PrintStream(tulosvirta));
-        pelaajaHash = new HashMap<>();
-        
-        evan = new Pelaaja("Evan", MIES);
-        pelaajaHash.put(evan.getNimi(), evan);
     }
     
     @After
@@ -46,21 +41,24 @@ public class YhdeksanTest {
     }
     
     @Test
-    public void oikeaHloJuo(){
-        String syote = muodosta("Evan");
-        Yhdeksan yhdeksan = new Yhdeksan(new Scanner(syote), pelaajaHash);
-        yhdeksan.suorita();
-        assertEquals(evan.getJuonut(), 1);
+    public void saantoLisataanListaan() {
+        String syote = muodosta("saanto x");
+        Kuningas kuningas = new Kuningas(new Scanner(syote));
+        kuningas.suorita();
+        assertTrue(kuningas.getSaannot().size()== 1);
     }
     
     @Test
-    public void kysyyUudestaanJosAnnetaanVaaraNimi(){
-        String syote = muodosta("kik","Evan");
-        Yhdeksan yhdeksan = new Yhdeksan(new Scanner(syote), pelaajaHash);
-        yhdeksan.suorita();
-        assertTrue(tulosvirta.toString().contains("?"));
+    public void tulostusMuuttuuKolmenSuorituksenJalkeen(){
+        String syote = muodosta("saanto x","Saanto y","Saanto z");
+        Kuningas kuningas = new Kuningas(new Scanner(syote));
+        kuningas.suorita();
+        kuningas.suorita();
+        kuningas.suorita();
+        kuningas.suorita();
+        assertTrue(tulosvirta.toString().contains("Nostaja juo"));
     }
-    
+
     private String muodosta(String... lines) {
         String linesWithEnter = "";
         for (String line : lines) {

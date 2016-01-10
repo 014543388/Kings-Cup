@@ -16,8 +16,5 @@ public abstract class Kortti {
      * Suorittaa jokaiselle kortille ominaisen toiminnon
      */
     public abstract void suorita();
-
-//    abstract String getSaanto();
-//    
-//    
+   
 }

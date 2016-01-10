@@ -42,6 +42,7 @@ public class Korttipakka {
      * @return jokin pakassa olave kortti
      */
     public Kortti nostaSatunnainenKortti(){
+        if(korttejaYhteensa()==0)return null;
         int eriKortteja = kortit.keySet().size();
         int kortinNumero = random.nextInt(eriKortteja) + 1;
         while(korttienMaarat.get(kortinNumero)==0){

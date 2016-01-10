@@ -23,7 +23,14 @@ public class Kuningatar extends Kortti{
         System.out.println("Question master\nNostajasta tulee Question master"
                 + " kunnes joku toinen nostaa kuningattaren");
         System.out.print("Question master: ");
-        this.questionMaster = pelaajat.get(lukija.nextLine());
+        String qm = lukija.nextLine();
+        
+        while(!pelaajat.containsKey(qm)){
+            System.out.print("pelaaja ei mukana pelissä. Kenestä QuestionMaster? ");
+            qm = lukija.nextLine();
+        }
+        
+        this.questionMaster = pelaajat.get(qm);
     }
 
     public Pelaaja getQuestionMaster() {

@@ -63,6 +63,12 @@ public class NeverHaveIEverTest {
     public void palauttaaNullJosKysymyksetLoppu(){
         assertEquals(enkoskaan.kysySeuraava(), null);
     }
+    
+    @Test
+    public void kysySeuraavaPalauttaaKysymyksen(){
+        enkoskaan.lisaaKysymys("wprågnp");
+        assertTrue(enkoskaan.kysySeuraava().contains("ole koskaan"));
+    }
 
     
 }

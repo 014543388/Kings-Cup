@@ -1,6 +1,8 @@
 kingscup/kortit/Kymmenen.class
 kingscup/kortit/Jatka.class
 kingscup/kortit/Kaksi.class
+kingscup/logiikka/KingsCup.class
+kingscup/logiikka/Sukupuoli.class
 kingscup/kortit/Seitseman.class
 kingscup/kortit/Yhdeksan.class
 kingscup/kortit/Kuusi.class
@@ -10,9 +12,12 @@ kingscup/kortit/Kuningatar.class
 kingscup/kortit/Kuningas.class
 kingscup/kortit/Nelja.class
 kingscup/logiikka/NeverHaveIEver.class
+kingscup/pelilauta/RandomKorttiNapinKuuntelija.class
 kingscup/kortit/Viisi.class
 kingscup/pelilauta/KorttinapinKuuntelija.class
 kingscup/logiikka/Korttipakka.class
+kingscup/logiikka/Peli.class
+kingscup/kortit/Loppukortti.class
 kingscup/pelilauta/PelaajanapinKuuntelija.class
 kingscup/kortit/Kortti.class
 kingscup/kortit/Kahdeksan.class

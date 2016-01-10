@@ -14,13 +14,16 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-
-public class YhdeksanTest {
+/**
+ *
+ * @author eamiller
+ */
+public class KuningatarTest {
     ByteArrayOutputStream tulosvirta;
     HashMap<String, Pelaaja> pelaajaHash;
     Pelaaja evan;
     
-    public YhdeksanTest() {
+    public KuningatarTest() {
     }
     
     @BeforeClass
@@ -46,21 +49,21 @@ public class YhdeksanTest {
     }
     
     @Test
-    public void oikeaHloJuo(){
+    public void oikeastaHenkilostaQM(){
         String syote = muodosta("Evan");
-        Yhdeksan yhdeksan = new Yhdeksan(new Scanner(syote), pelaajaHash);
-        yhdeksan.suorita();
-        assertEquals(evan.getJuonut(), 1);
+        Kuningatar kuningatar = new Kuningatar(new Scanner(syote), pelaajaHash);
+        kuningatar.suorita();
+        assertEquals(kuningatar.getQuestionMaster(), evan);
     }
     
     @Test
     public void kysyyUudestaanJosAnnetaanVaaraNimi(){
         String syote = muodosta("kik","Evan");
-        Yhdeksan yhdeksan = new Yhdeksan(new Scanner(syote), pelaajaHash);
-        yhdeksan.suorita();
+        Kortti kuningatar = new Kuningatar(new Scanner(syote), pelaajaHash);
+        kuningatar.suorita();
         assertTrue(tulosvirta.toString().contains("?"));
     }
-    
+
     private String muodosta(String... lines) {
         String linesWithEnter = "";
         for (String line : lines) {

@@ -14,13 +14,16 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-
-public class YhdeksanTest {
+/**
+ *
+ * @author eamiller
+ */
+public class JatkaTest {
     ByteArrayOutputStream tulosvirta;
     HashMap<String, Pelaaja> pelaajaHash;
     Pelaaja evan;
     
-    public YhdeksanTest() {
+    public JatkaTest() {
     }
     
     @BeforeClass
@@ -48,16 +51,16 @@ public class YhdeksanTest {
     @Test
     public void oikeaHloJuo(){
         String syote = muodosta("Evan");
-        Yhdeksan yhdeksan = new Yhdeksan(new Scanner(syote), pelaajaHash);
-        yhdeksan.suorita();
+        Jatka jatka = new Jatka(new Scanner(syote), pelaajaHash);
+        jatka.suorita();
         assertEquals(evan.getJuonut(), 1);
     }
     
     @Test
     public void kysyyUudestaanJosAnnetaanVaaraNimi(){
         String syote = muodosta("kik","Evan");
-        Yhdeksan yhdeksan = new Yhdeksan(new Scanner(syote), pelaajaHash);
-        yhdeksan.suorita();
+        Jatka jatka = new Jatka(new Scanner(syote), pelaajaHash);
+        jatka.suorita();
         assertTrue(tulosvirta.toString().contains("?"));
     }
     
