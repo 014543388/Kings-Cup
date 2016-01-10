@@ -66,3 +66,12 @@ Aikaa kulutettu yhteensä noin 2h
 -JavaDocin tekemistä
 -luokkien siistimistä
 15min
+
+10.1.2016
+-vähän tetejä
+-checkstylt
+-testiraportti
+-ohjeiden kirjoitus
+-viimeinen luokkakaavio
+-muut lopputoimet
+n. 3h
