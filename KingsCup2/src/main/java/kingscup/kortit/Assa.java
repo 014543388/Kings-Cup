@@ -10,7 +10,6 @@ public class Assa extends Kortti{
 
     public Assa(Scanner lukija) {
         this.lukija = lukija;
-        nimi = "Ässä";
     }
     
     @Override
@@ -19,10 +18,6 @@ public class Assa extends Kortti{
         System.out.println("WATERFALL!");
         
         //kellota
-    }
-
-    public String getNimi() {
-        return nimi;
     }
     
 

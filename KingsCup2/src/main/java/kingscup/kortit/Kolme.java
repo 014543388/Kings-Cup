@@ -13,7 +13,6 @@ public class Kolme extends Kortti{
     public Kolme(Scanner lukija, HashMap<String, Pelaaja> pelaajat) {
         this.lukija = lukija;
         this.pelaajat = pelaajat;
-        nimi = "kolme";
     }
     
     @Override
