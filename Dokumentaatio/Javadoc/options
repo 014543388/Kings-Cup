@@ -1,0 +1,24 @@
+-classpath
+'/home/eamiller/Desktop/Kings-Cup/KingsCup2/target/classes'
+-encoding
+'UTF-8'
+-protected
+-sourcepath
+'/home/eamiller/Desktop/Kings-Cup/KingsCup2/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2016. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'/home/eamiller/Desktop/Kings-Cup/KingsCup2/target/site/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'KingsCup2 1.0-SNAPSHOT API'
+-linkoffline
+'http://docs.oracle.com/javase/7/docs/api' '/home/eamiller/Desktop/Kings-Cup/KingsCup2/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'KingsCup2 1.0-SNAPSHOT API'

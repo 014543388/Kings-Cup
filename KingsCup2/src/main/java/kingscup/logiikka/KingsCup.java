@@ -11,7 +11,6 @@ public class KingsCup {
      * Luo ja käynnistää pelin
      */
     public static void main(String[] args) {
-
         Peli peli = new Peli(lukija);
         peli.aloitaPeli();
     }
