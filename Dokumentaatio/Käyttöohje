@@ -1,6 +1,6 @@
-Kings Cup KÄYTTÖOHJEET
+Kings Cup KÄYTTÖOHJE
 
-Kings Cup on sosiaalinen juomapeli. SE on täydellinen juhliin, jotka ovat täynnä uusia tuttavuuksia.
+Kings Cup on sosiaalinen juomapeli. Se on täydellinen juhliin, jotka ovat täynnä uusia tuttavuuksia.
 Pelissä ei ole varsinaista voittajaa, mutta lopussa on hauska nähdä, kuinka paljon kukin on juonut.
 
 Pelin aloitus:
@@ -18,7 +18,7 @@ paikkoja. Vuoro ei ole keskeinen käsite Kings Cupissa.
 
 Kun kortti on nostettu, tulee graafisesta käyttöliittymästä painaa tätä korttia vastaavaa painiketta.
 Tekstikäyttöliittymään ilmestyy tätä korttia vastaava sääntö ja ohjeet, miten toimia (Joku todennäköisesti juo).
-Toiminto suoritetaan loppuun ja painetaan enter.
+Toiminto suoritetaan loppuun ja painetaan enter. Tämän jälkeen seuraava kortti voidaan nostaa.
 
 Pelin graafisessa käyttöliittymässä on myös oma nappi jokaiselle pelaajalle. Nappia painamalla avautuu uusi ikkuna,
 josta näkee kyseisen pelaajan matet* ja tähän asti juodut juomat. Ikkunassa on myös nappi, jolla voi manuaalisesti
@@ -28,7 +28,7 @@ Jos kortin nostaja rikkoo korttien mudostaman ringin nostaessaan kortin, täytyy
 käytettävä pelaajan manuaalista juomanappia.
 
 *Mate on kahden pelaajan välinen suhde jossa yksi pelaaja on toisen "mate". Pelaajan juodessa, jokaisen 
-kyseisen pelaajan maten (suoran tai epäsuoran) on myös juotava. Kortin 8 nostanut saa valita itselleen maten.
+tämän pelaajan maten (suoran tai epäsuoran) on myös juotava. Kortin 8 nostanut saa valita itselleen maten (8 is mate).
 Matet säilyvät koko pelin ajan eikä ne ole siirrettäviä.
 
 RANDOMKORTTINAPPI
