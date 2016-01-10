@@ -15,5 +15,7 @@ public class KingsCup {
         Peli peli = new Peli(lukija);
         peli.aloitaPeli();
     }
+    
+    
 
 }
