@@ -14,8 +14,8 @@ public class Kymmenen extends Kortti {
         lisaaKysymykset();
         this.lukija = lukija;
     }
-    
-    public int kysymyksiaJaljella(){
+
+    public int kysymyksiaJaljella() {
         return this.enolekoskaan.getKysymykset().size();
     }
 
@@ -46,7 +46,9 @@ public class Kymmenen extends Kortti {
         } else {
             String enter;
             for (int i = 0; i < 5; i++) {
-                if (this.enolekoskaan.getKysymykset().isEmpty()) continue;
+                if (this.enolekoskaan.getKysymykset().isEmpty()) {
+                    continue;
+                }
                 System.out.println(enolekoskaan.kysySeuraava());
                 enter = lukija.nextLine();
             }

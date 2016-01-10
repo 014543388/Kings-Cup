@@ -1,4 +1,3 @@
-
 package kingscup.pelilauta;
 
 import kingscup.pelaajaikkuna.Pelaajaikkuna;
@@ -12,18 +11,19 @@ import kingscup.logiikka.Pelaaja;
  *
  * @author eamiller
  */
-public class PelaajanapinKuuntelija implements ActionListener{
+public class PelaajanapinKuuntelija implements ActionListener {
+
     private JTextArea tekstinakyma;
     private Pelaaja pelaaja;
 
     public PelaajanapinKuuntelija(Pelaaja pelaaja) {
         this.pelaaja = pelaaja;
     }
-    
+
     @Override
     public void actionPerformed(ActionEvent e) {
         Pelaajaikkuna ikkuna = new Pelaajaikkuna(pelaaja);
         SwingUtilities.invokeLater(ikkuna);
     }
-    
+
 }

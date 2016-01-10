@@ -1,4 +1,3 @@
-
 package kingscup.pelaajaikkuna;
 
 import java.awt.event.ActionEvent;
@@ -10,7 +9,8 @@ import kingscup.logiikka.Pelaaja;
  *
  * @author eamiller
  */
-public class JuomanapinKuuntelija implements ActionListener{
+public class JuomanapinKuuntelija implements ActionListener {
+
     private Pelaaja pelaaja;
     private JTextArea teksti;
 
@@ -18,11 +18,11 @@ public class JuomanapinKuuntelija implements ActionListener{
         this.teksti = teksti;
         this.pelaaja = pelaaja;
     }
-    
+
     @Override
     public void actionPerformed(ActionEvent e) {
         this.pelaaja.juo();
         this.teksti.setText(pelaaja.toString());
     }
-    
+
 }

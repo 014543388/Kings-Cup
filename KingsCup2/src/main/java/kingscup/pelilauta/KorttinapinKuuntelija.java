@@ -1,4 +1,3 @@
-
 package kingscup.pelilauta;
 
 import java.awt.event.ActionEvent;
@@ -12,7 +11,8 @@ import kingscup.logiikka.Korttipakka;
  *
  * @author eamiller
  */
-public class KorttinapinKuuntelija implements ActionListener{
+public class KorttinapinKuuntelija implements ActionListener {
+
     private Korttipakka pakka;
     private int kortinnumero;
     private JTextField teksti;
@@ -23,15 +23,13 @@ public class KorttinapinKuuntelija implements ActionListener{
         this.kortinnumero = kortinnumero;
     }
 
-    
-    
     @Override
     public void actionPerformed(ActionEvent e) {
         pakka.nostaKortti(kortinnumero).suorita();
         System.out.println("");
-        if(kortinnumero == 13){
+        if (kortinnumero == 13) {
             teksti.setText(pakka.getKortit().get(13).toString());
         }
     }
-    
+
 }

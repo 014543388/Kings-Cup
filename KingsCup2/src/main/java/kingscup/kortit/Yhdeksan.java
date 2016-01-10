@@ -1,12 +1,11 @@
-
 package kingscup.kortit;
 
 import java.util.HashMap;
 import java.util.Scanner;
 import kingscup.logiikka.Pelaaja;
 
+public class Yhdeksan extends Kortti {
 
-public class Yhdeksan extends Kortti{
     private Scanner lukija;
     private HashMap<String, Pelaaja> pelaajat;
 
@@ -14,8 +13,6 @@ public class Yhdeksan extends Kortti{
         this.lukija = lukija;
         this.pelaajat = pelaajat;
     }
-    
-    
 
     @Override
     public void suorita() {
@@ -25,12 +22,12 @@ public class Yhdeksan extends Kortti{
                 + "joku ei riimiä tai jo sanottu sana tulee uudestaan.\n Mokaaja juo.");
         System.out.print("mokaaja: ");
         String juoja = lukija.nextLine();
-        while(!pelaajat.containsKey(juoja)){
+        while (!pelaajat.containsKey(juoja)) {
             System.out.print("pelaaja ei mukana pelissä. Kuka juo? ");
             juoja = lukija.nextLine();
         }
-        
+
         pelaajat.get(juoja).juo();
     }
-    
+
 }

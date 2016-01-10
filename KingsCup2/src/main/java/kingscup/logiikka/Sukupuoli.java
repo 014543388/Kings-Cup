@@ -7,7 +7,7 @@ package kingscup.logiikka;
 
 /**
  * Sukupuoli-enum
- * 
+ *
  * @author eamiller
  */
 public enum Sukupuoli {

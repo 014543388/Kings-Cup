@@ -1,12 +1,11 @@
-
 package kingscup.kortit;
 
 import java.util.HashMap;
 import java.util.Scanner;
 import kingscup.logiikka.Pelaaja;
 
+public class Kuningatar extends Kortti {
 
-public class Kuningatar extends Kortti{
     private Pelaaja questionMaster;
     private Scanner lukija;
     private HashMap<String, Pelaaja> pelaajat;
@@ -24,20 +23,17 @@ public class Kuningatar extends Kortti{
                 + " kunnes joku toinen nostaa kuningattaren");
         System.out.print("Question master: ");
         String qm = lukija.nextLine();
-        
-        while(!pelaajat.containsKey(qm)){
+
+        while (!pelaajat.containsKey(qm)) {
             System.out.print("pelaaja ei mukana pelissä. Kenestä QuestionMaster? ");
             qm = lukija.nextLine();
         }
-        
+
         this.questionMaster = pelaajat.get(qm);
     }
 
     public Pelaaja getQuestionMaster() {
         return questionMaster;
     }
-    
-    
-    
-    
+
 }

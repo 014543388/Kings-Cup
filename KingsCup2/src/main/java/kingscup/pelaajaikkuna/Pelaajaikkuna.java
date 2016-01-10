@@ -1,4 +1,3 @@
-
 package kingscup.pelaajaikkuna;
 
 import java.awt.Container;
@@ -11,16 +10,14 @@ import javax.swing.JTextArea;
 import javax.swing.WindowConstants;
 import kingscup.logiikka.Pelaaja;
 
+public class Pelaajaikkuna implements Runnable {
 
-public class Pelaajaikkuna implements Runnable{
     private Pelaaja pelaaja;
     private JFrame frame;
 
     public Pelaajaikkuna(Pelaaja pelaaja) {
         this.pelaaja = pelaaja;
     }
-    
-    
 
     @Override
     public void run() {
@@ -34,18 +31,18 @@ public class Pelaajaikkuna implements Runnable{
         frame.pack();
         frame.setVisible(true);
     }
-    
+
     private void luoKomponentit(Container container) {
         GridLayout layout = new GridLayout(1, 2);
         container.setLayout(layout);
-        
+
         JTextArea teksti = new JTextArea(pelaaja.toString());
         container.add(teksti);
-        
+
         JButton juoNappi = new JButton("juo");
         ActionListener juomanapinKuuntelija = new JuomanapinKuuntelija(pelaaja, teksti);
         juoNappi.addActionListener(juomanapinKuuntelija);
         container.add(juoNappi);
     }
-    
+
 }

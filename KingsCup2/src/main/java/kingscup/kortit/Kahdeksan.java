@@ -31,13 +31,13 @@ public class Kahdeksan extends Kortti {
                 System.out.print("Kaveri: ");
                 kaveri = lukija.nextLine();
             }
-            if(pelaajat.get(nostaja).getMates().contains(pelaajat.get(kaveri))){
+            if (pelaajat.get(nostaja).getMates().contains(pelaajat.get(kaveri))) {
                 System.out.println("Kaveriyhteys on jo olemassa. Uudestaan");
                 System.out.print("Nostaja: ");
                 nostaja = lukija.nextLine();
                 System.out.print("Kaveri: ");
                 kaveri = lukija.nextLine();
-            }else{
+            } else {
                 break;
             }
         }

@@ -31,10 +31,10 @@ public class Peli {
         this.lukija = lukija;
         this.pelaajat = new HashMap<>();
     }
-    
+
     /**
      * Luo pelin korttipakan
-     * 
+     *
      * @param pelissä mukana olevat pelaajat
      * @return luotu pakka
      */
@@ -57,7 +57,7 @@ public class Peli {
 
         return new Korttipakka(kortit);
     }
-    
+
     /**
      * pelin tekstuaalinen käyttöliittymälogiikka
      */
@@ -85,7 +85,7 @@ public class Peli {
             if (kysySukupuoli) {
                 System.out.print("Sukupuoli (m/n): ");
                 String sukupuoli = lukija.nextLine();
-                
+
                 if (sukupuoli.startsWith("m")) {
                     this.pelaajat.put(nimi, new Pelaaja(nimi, MIES));
                     pelaajia++;
