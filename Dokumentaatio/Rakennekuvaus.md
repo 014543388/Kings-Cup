@@ -2,7 +2,7 @@ RAKENNEKUVAUS
 
 HUOM. Pelissä käytetään sekä graafista, että tekstuaalista käyttöliittymää.
 
-Peli lähtee käyntiin main-metodin luodessa Peli-olion ja käynnistäessä tämän aloitaPeli(-metodin).
+Peli lähtee käyntiin main-metodin luodessa Peli-olion ja käynnistäessä tämän aloitaPeli()-metodin.
 Peli-luokka lisää pelin pelaajat käyttäjän syötteen mukaan ja luo kaikki Kortti-oliot sekä Korttipakan näillä korteilla.
 Pelaajat syötetään ennen korttipakan luomista, sillä osan korteista on tiedettävä, ketkä pelaavat. Korttipakka pitää
 kirjaa, kuinka monta kutakin korttia on jäljellä. Pienellä modifikoinnilla voi peliin saada pakanlisäys-toiminnon.
